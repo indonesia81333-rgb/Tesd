@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: telegram-gofile-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: GOFILE_API_KEY
+        sync: false
+      - key: GOFILE_WT
+        value: 4fd6sg89d7s6
+      - key: ALLOWED_USERS
+        sync: false
